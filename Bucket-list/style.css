@@ -1,0 +1,175 @@
+/* Estilizando a área principal. Outline no topo */
+
+.areaPrincial {
+    /* 1. Define a borda (espessura, estilo e cor) */
+    border: 2px solid #E60064; 
+
+    /* 2. Garante que o fundo seja transparente ou da cor da página */
+    background-color: transparent;
+
+    align-items: center;
+
+    /* 3. Espaçamento interno para os elementos não encostarem na borda */
+    padding: 20px 5px;
+
+    /* 4. Arredonda os cantos (opcional, mas fica mais moderno) */
+    border-radius: 30px;
+
+    /* 5. Largura máxima para não ocupar a tela inteira */
+    max-width: 95%;
+    width: 100%;
+    
+    /* Centraliza a div na página */
+    margin: 20px auto;
+}
+
+
+
+/* Estilizando a introdução */
+#introducao {
+    color: #E60064;
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: -35px;
+    margin-left: 40px;
+}
+
+
+/* Estilizando o título */
+h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #eaeaea;
+    font-size: 55px;
+    font-weight: 700; /* Deixa o título em negrito */
+    letter-spacing: -1px; /* Um ajuste que fica muito bem nessa fonte específica */
+    margin-left: 40px;
+}
+
+
+/* Estilizando a área de entrada. O fundo de onde fica o Input */
+.areaInput {
+    /* Usamos flexbox para organizar o input e o botão lado a lado */
+    display: flex;
+    /* Espaçamento entre o input e o botão */
+    justify-content: space-between;
+
+    align-items: center;
+
+    /* Espaçamento interno*/
+    padding: 4px;
+
+    /* Cor de fundo e borda arredondada para destacar a área de entrada */
+    background-color: #2F2235;
+
+    /* Borda arredondada para um visual mais suave */
+    border-radius: 50px;
+
+    /* Espaçamento externo para separar da borda da área principal */
+    margin-left: 40px;
+
+    /* Espaçamento externo para separar da borda da área principal */
+    margin-right: 40px;
+}
+
+
+/* Estilizando a caixa de entrada */
+input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 70px;
+    width: 82%;
+}
+
+
+/* Estilizando os ícones do Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  color: white;
+}
+
+
+/* Estilizando o botão */
+#botao-add-tarefa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;  /* Altura e largura iguais para ficar circular */
+    height: 35px;
+    padding: 0;   /* Removemos o padding para não achatar o círculo */
+    border-radius: 70px; /* Torna o botão um círculo perfeito */
+    background-color: transparent; /* Deixamos o fundo transparente para mostrar a cor da área de entrada */
+    border: none;
+    cursor: pointer;
+}
+
+
+#botao-add-tarefa:hover {
+    background-color: #199e9e;
+}
+
+
+/* Estilizando o corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0b0b0b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+
+.textura-noise {
+    position: fixed; /* Fica parado enquanto fazes scroll */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Importante: permite clicar nos botões por baixo dela */
+    z-index: 9999; /* Fica acima de tudo */
+    opacity: 0.1; /* Ajusta aqui: mais alto = mais "sujo", mais baixo = mais limpo */
+    
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+
+/* Estilizando a lista */
+ul {
+    list-style: none; /* Remove as bolinhas */
+    padding: 0;
+    width: 320px;
+    margin-top: -25px;
+    margin-left: -50px;
+}
+
+
+li {
+    background: #107171;
+    margin-bottom: 8px;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    transition: background 0.3s;
+    width: 350px;
+}
+
+
+li:hover {
+    background-color: #f0f0f0;
+}
+
+
+.concluido {
+    text-decoration: line-through;
+    color: gray;
+}
